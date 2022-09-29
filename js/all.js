@@ -1,1 +1,1 @@
-"use strict";var numerr=322;
+"use strict";var slide_hero=new Swiper(".slide-principal",{effect:"fade"});
