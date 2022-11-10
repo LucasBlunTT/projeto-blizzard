@@ -15,3 +15,12 @@ var slide_hero = new Swiper(".slide-principal", {
         disableOnInteraction: false
     }
 });
+
+const allFilters = document.querySelectorAll('.js-nav-games li a');
+
+allFilters.forEach(filter => {
+    filter.addEventListener('click', (event) => {
+        event.preventDefault();
+        console.log('click');
+    })
+})
