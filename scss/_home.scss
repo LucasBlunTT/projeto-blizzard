@@ -9,6 +9,7 @@
         .swiper-wrapper {
             .swiper-slide {
                 padding-top: 20.7rem;
+                background-size: cover !important;
 
                 &.slide-01 {
                     background: url("../img/banner-slide-01.jpg") no-repeat center center;
@@ -172,6 +173,52 @@
                 &-thumb-active {
                     opacity: 1;
                     filter: grayscale(0%);
+                }
+            }
+        }
+    }
+
+    .swiper-progress-bar {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        display: block;
+        z-index: 3;
+
+        .slide-progress-bar {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            width: auto;
+            height: 3px;
+            opacity: 0;
+            display: block;
+
+            &:after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: $primary-default;
+                height: 100%;
+                width: 0;
+                transition: width 0.1s linear;
+            }
+        }
+
+        &.active {
+            .slide-progress-bar {
+                opacity: 1;
+            }
+        }
+
+        &.animate {
+            .slide-progress-bar {
+                &:after {
+                    width: 100%;
+                    transition: width 5s linear;
                 }
             }
         }
