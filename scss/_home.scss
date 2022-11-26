@@ -241,6 +241,7 @@
 
                     &.slide-02 {
                         background-position-x: 63%;
+
                         .left-content {
                             h2 {
                                 font-size: 4rem;
@@ -255,6 +256,7 @@
 
                     &.slide-03 {
                         background-position-x: 60%;
+
                         .left-content {
                             h2 {
                                 max-width: 33rem;
@@ -289,7 +291,6 @@
 }
 
 .s-games {
-    display: none;
     padding-top: 8.3rem;
     padding-bottom: 11rem;
 
@@ -411,6 +412,79 @@
             }
         }
     }
+
+    @media (max-width: 991px) {
+
+        .top {
+            .left-top {
+                span {
+                    display: none;
+                }
+            }
+        }
+
+        .tab-games-content {
+            .tab-pane-games {
+                &.active {
+                    grid-template-columns: repeat(3, 1fr);
+                }
+            }
+        }
+    }
+
+    @media (max-width: 560px) {
+        padding-top: 5.7rem;
+        padding-bottom: 6.9rem;
+
+        .top {
+            margin-bottom: 5.7rem;
+
+            .left-top {
+                h2 {
+                    font-size: 2.8rem;
+                }
+            }
+
+            .right-top {
+                justify-content: flex-end;
+
+                ul {
+                    display: none;
+                }
+
+                .btn-all-games {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+
+        .tab-games-content {
+            .tab-pane-games {
+                &.active {
+                    grid-template-columns: repeat(2, 1fr);
+                    grid-gap: 2.4rem 1.6rem;
+                }
+            }
+
+            .card-all-games {
+                height: 21.2rem !important;
+
+                img {
+                    max-width: 6.9rem;
+                }
+
+                span {
+                    margin-top: 1.5rem !important;
+                    font-size: 1.4rem !important;
+
+                    img {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
 }
 
 .s-download {

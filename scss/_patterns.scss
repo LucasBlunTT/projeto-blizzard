@@ -9,18 +9,23 @@
     color: #ffffff;
     border: 1px solid transparent;
     transition: color 0.3s, background-color 0.3s;
+
     img {
         margin-right: 0.8rem;
     }
+
     &-primary {
         background-color: $primary-default;
         border-color: $primary-default;
+
         &:hover {
             background-color: $primary-light;
         }
     }
+
     &-outline {
         border-color: #ffffff;
+
         &:hover {
             color: $neutral-200;
             background-color: #ffffff;
@@ -32,6 +37,7 @@
     display: block;
     width: 100%;
     max-width: 280px;
+
     &:hover {
         .image {
             img {
@@ -39,15 +45,18 @@
             }
         }
     }
+
     .image {
         overflow: hidden;
         border-radius: 4px;
         height: 38.3rem;
         margin-bottom: 3.4rem;
+
         img {
             transition: transform 0.3s ease-in;
         }
     }
+
     .info {
         h3 {
             font-weight: 600;
@@ -56,10 +65,35 @@
             color: #e5e5e5;
             margin-bottom: 0.4rem;
         }
+
         span {
             font-size: 14px;
             line-height: 21px;
             color: rgba(229, 229, 229, 0.8);
+        }
+    }
+
+    @media (max-width: 1200px) {
+        .image {
+            height: 34.3rem;
+        }
+    }
+
+    @media (max-width: 991px) {
+
+        .image {
+            height: 30.3rem;
+        }
+    }
+
+    @media (max-width: 560px) {
+        .image {
+            height: 21.3rem;
+            margin-bottom: 0;
+        }
+
+        .info{
+            display: none;
         }
     }
 }
